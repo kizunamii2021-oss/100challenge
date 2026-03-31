@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年4月 ソウルメッセージ 100人チャレンジ | 魂の羅針盤 Mii</title>
+    
+    <!-- 外部依存を最小限にするため、Tailwind CSSはCDN経由で読み込みます -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Shippori Mincho -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Shippori Mincho"', 'serif'],
+                    },
+                    colors: {
+                        indigo: {
+                            950: '#0B132B',
+                            900: '#14213D',
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                        },
+                        pearl: '#FDFCF8',
+                        sakura: '#FFD1DC',
+                        sakurabg: '#FFF0F5',
+                    },
+                    letterSpacing: {
+                        widest: '.25em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* フェードインアニメーション */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* 黄金のグラデーションテキスト */
+        .gold-gradient-text {
+            background: linear-gradient(to right, #D4AF37, #F3E5AB, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ボタンの光るエフェクト */
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* 煌めきのアニメーション */
+        .sparkle-animation {
+            animation: sparkle 2s infinite ease-in-out;
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* 日本語の折り返しを美しく保つためのスタイル */
+        .phrase-block {
+            display: inline-block;
+            word-break: keep-all;
+            overflow-wrap: anywhere;
+            white-space: normal;
+        }
+
+        /* 句読点や特定の語句が孤立しないようにする */
+        .no-orphan {
+            display: inline-block;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body class="bg-pearl text-gray-800 font-serif antialiased leading-relaxed tracking-wider selection:bg-gold selection:text-white">
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-indigo-950 via-indigo-900 to-[#2A2D43]">
+        <canvas id="stardust-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-60"></canvas>
+        <div class="absolute inset-0 bg-gradient-to-t from-gold/10 to-transparent pointer-events-none"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
+            <div class="text-gold text-3xl md:text-4xl mb-6 font-light select-none">≋</div>
+            
+            <p class="text-gold-light tracking-widest text-xs md:text-base mb-8 uppercase opacity-90 leading-loose">
+                <span class="phrase-block">2026年4月、</span><br class="md:hidden">
+                <span class="phrase-block">7年ぶりに革命の星が動きだす</span>
+            </p>
+
+            <h1 class="text-white text-2xl md:text-5xl lg:text-6xl font-medium leading-relaxed md:leading-loose tracking-widest mb-12">
+                <span class="phrase-block">言葉を書き換えれば、</span><br>
+                <span class="phrase-block">あなたの運命は</span><br class="md:hidden">
+                <span class="phrase-block gold-gradient-text font-semibold">「再始動」する。</span>
+            </h1>
+
+            <div class="flex flex-col items-center space-y-3 mb-16">
+                <span class="text-gold-light text-xs md:text-base tracking-[0.3em] border-b border-gold/30 pb-2">宿命鑑定 × 魂の対話</span>
+                <span class="text-white text-base md:text-xl tracking-widest">【ソウルメッセージ100人チャレンジ】</span>
+            </div>
+
+            <a href="https://www.reservestock.jp/pc_reserves_v3/course/42321?course_id=Y2I0ODQ5OGQyO" target="_blank" class="btn-glow inline-block px-8 py-5 md:px-12 bg-gold/10 border border-gold text-gold-light hover:bg-gold hover:text-indigo-950 transition-all duration-500 text-sm md:text-base tracking-widest rounded-full shadow-lg">
+                <span class="no-orphan">光の循環に参加する</span>
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+            <span class="text-gold/50 text-[10px] tracking-widest mb-2">SCROLL</span>
+            <div class="w-[1px] h-6 bg-gradient-to-b from-gold/50 to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Celestial Topics -->
+    <section id="topics" class="py-20 md:py-32 px-6 bg-pearl border-b border-gray-100 text-center text-gray-900">
+        <div class="max-w-5xl mx-auto fade-in-section">
+            <div class="mb-16">
+                <span class="text-sakura text-2xl block mb-4">🌸</span>
+                <h2 class="text-xl md:text-3xl font-medium tracking-widest leading-relaxed">
+                    <span class="no-orphan">2026年4月。</span><br>
+                    <span class="phrase-block">宇宙の時計が、</span><span class="no-orphan">大きく動き出す。</span>
+                </h2>
+                <div class="w-12 h-[1px] bg-gold mx-auto mt-6 opacity-60"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transform hover:-translate-y-1 transition-transform duration-500">
+                    <div class="text-gold text-xl mb-4">✧</div>
+                    <h3 class="text-base md:text-lg font-medium mb-4 tracking-widest border-b border-gold/10 pb-3">4/17 牡羊座の新月</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed tracking-wider">
+                        「何者でもない自分」として、真新しい自分へと生まれ変わる聖なる夜。新しい種を蒔く絶好のタイミングです。
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transform hover:-translate-y-1 transition-transform duration-500">
+                    <div class="text-gold text-xl mb-4">✧</div>
+                    <h3 class="text-base md:text-lg font-medium mb-4 tracking-widest border-b border-gold/10 pb-3">4/26 天王星の双子座入り</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed tracking-wider">
+                        7年ぶりの変革の星の移動。コミュニケーションと知性の星座で起こる、まさに「言葉の革命」の瞬間です。
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transform hover:-translate-y-1 transition-transform duration-500">
+                    <div class="text-gold text-xl mb-4">✧</div>
+                    <h3 class="text-base md:text-lg font-medium mb-4 tracking-widest border-b border-gold/10 pb-3">壬辰（みずのえたつ）の月</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed tracking-wider">
+                        深い慈愛ですべてを包み込み、過去の重荷を流していく大海のエネルギー。魂の浄化と上昇を促します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Feature Section (Gemini API) -->
+    <section id="word-transformer" class="py-20 px-6 bg-white relative overflow-hidden">
+        <div class="max-w-3xl mx-auto fade-in-section border border-gold/20 p-6 md:p-14 rounded-[2rem] shadow-lg bg-pearl/30 backdrop-blur-sm">
+            <div class="text-center mb-10">
+                <span class="text-gold text-[10px] md:text-sm tracking-[0.3em] uppercase block mb-3">AI Experience</span>
+                <h3 class="text-xl md:text-3xl font-medium tracking-widest text-gray-900">✨言霊リデザイン✨</h3>
+                <p class="text-gray-500 text-xs md:text-sm mt-4 leading-loose px-2">
+                    今、あなたを足止めしている「停滞した想い」を教えてください。<br class="hidden md:block">
+                    魂の羅針盤が、運命を拓く「新しい言葉」へと書き換えます。
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <label for="old-word" class="block text-[10px] text-gray-400 mb-2 tracking-widest ml-2 uppercase">Your Current Feeling</label>
+                    <textarea id="old-word" rows="3" class="w-full bg-white border border-gray-100 rounded-2xl p-4 md:p-6 focus:ring-1 focus:ring-gold focus:outline-none text-gray-700 placeholder-gray-300 transition-all text-base md:text-lg" placeholder="例：変わりたいのに動けない、など"></textarea>
+                </div>
+                
+                <button id="transform-btn" class="w-full py-5 bg-indigo-950 text-gold-light rounded-full tracking-widest hover:bg-indigo-900 transition-all duration-300 font-medium shadow-md flex items-center justify-center space-x-2 group">
+                    <span class="text-sm md:text-lg">✨ 言葉を再始動させる ✨</span>
+                </button>
+
+                <div id="ai-result" class="hidden mt-8 p-8 md:p-12 bg-indigo-950 rounded-[2rem] text-white relative border border-gold/30 shadow-inner overflow-hidden">
+                    <div id="loading-spinner" class="flex flex-col items-center justify-center space-y-4 py-8">
+                        <div class="w-8 h-8 border-2 border-gold border-t-transparent rounded-full animate-spin"></div>
+                        <p class="text-gold-light text-xs animate-pulse tracking-widest">魂の羅針盤を読み解いています...</p>
+                    </div>
+                    <div id="result-content" class="hidden text-center">
+                        <div class="flex items-center justify-center mb-6">
+                            <span class="text-gold text-3xl sparkle-animation">✧</span>
+                        </div>
+                        <div id="redesigned-word" class="text-2xl md:text-4xl font-bold gold-gradient-text mb-8 tracking-[0.1em] leading-relaxed"></div>
+                        <p id="mii-message" class="text-gray-300 text-sm md:text-base leading-loose italic max-w-lg mx-auto"></p>
+                        <div class="mt-10 pt-8 border-t border-white/10 text-center">
+                            <p class="text-xs text-gold-light mb-4 tracking-widest leading-relaxed">
+                                <span class="phrase-block">この言葉の奥にある「真実」を</span><br class="md:hidden">
+                                <span class="phrase-block">詳しく聴きにきませんか？</span>
+                            </p>
+                            <a href="#cta" class="inline-block text-white border-b border-gold text-xs pb-1 hover:text-gold transition-colors font-medium uppercase tracking-widest">Challenge Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION Section -->
+    <section id="mission" class="py-20 md:py-32 px-6 bg-pearl">
+        <div class="max-w-5xl mx-auto fade-in-section">
+            <div class="flex flex-col md:flex-row items-start gap-12 lg:gap-24">
+                <!-- Profile Image Frame -->
+                <div class="w-full md:w-5/12 flex justify-center md:sticky md:top-32 h-fit">
+                    <div class="relative w-64 md:w-72 h-80 border-[0.5px] border-gold/40 p-3 bg-white shadow-2xl z-10 rounded-sm">
+                        <div class="w-full h-full bg-gray-50 overflow-hidden flex items-center justify-center">
+                            <!-- GitHub Pages公開用にお写真の名前を profile.jpg と想定、またはアップロードした名前を使用 -->
+                            <img src="Gemini_Generated_Image_83j50p83j50p83j5.jpg" 
+                                 alt="魂の羅針盤 Mii" 
+                                 class="w-full h-full object-cover transition-all duration-1000 hover:scale-105"
+                                 onerror="this.onerror=null; this.src='profile.jpg';">
+                        </div>
+                        <div class="absolute -bottom-5 -right-5 text-sakura text-3xl sparkle-animation">🌸</div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-7/12 mt-8 md:mt-0">
+                    <span class="text-gold tracking-[0.3em] text-[10px] font-bold mb-4 block uppercase opacity-80">Mission & Vision</span>
+                    <h2 class="text-2xl md:text-4xl font-medium tracking-widest text-gray-900 mb-10 leading-relaxed text-center md:text-left">
+                        <span class="phrase-block">魂の羅針盤として。</span>
+                    </h2>
+                    
+                    <div class="space-y-12 text-left">
+                        <div class="pl-6 md:pl-8 border-l-[1px] border-gold/30">
+                            <h3 class="text-indigo-900 font-bold tracking-widest mb-4 text-xs">MISSION</h3>
+                            <p class="text-gray-700 leading-loose tracking-wider text-sm md:text-base">
+                                ご縁の糸で出会えたあなたの魂の美しさに光を当て、この世でたった一人のあなたらしさを輝かせて、幸せに生きる「魂の羅針盤」となること。
+                            </p>
+                        </div>
+
+                        <div class="pl-6 md:pl-8 border-l-[1px] border-gold/30">
+                            <h3 class="text-indigo-900 font-bold tracking-widest mb-4 text-xs">VISION</h3>
+                            <p class="text-gray-700 leading-loose tracking-wider text-sm md:text-base">
+                                一人ひとりが「私らしく生ききった！」と感じられて、心から安心して、持って生まれた力を自由に発揮できる世界（真の世界平和）を最前線で創り出すこと。
+                            </p>
+                        </div>
+
+                        <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-gold/10 space-y-6 text-gray-700 leading-loose tracking-wider italic text-sm md:text-base">
+                            <p>
+                                私自身が源となり、孤独や迷いという暗闇を温かく照らす<br class="hidden md:block">
+                                『言葉の灯（言霊）』を届けたいと思っています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Details -->
+    <section id="details" class="py-20 md:py-32 px-6 bg-indigo-950 text-white relative overflow-hidden text-center">
+        <div class="max-w-4xl mx-auto fade-in-section relative z-10">
+            <div class="inline-flex items-center justify-center space-x-4 mb-12 border border-gold/40 px-8 py-4 bg-indigo-900/50 backdrop-blur-md text-xs md:text-sm">
+                <span class="text-gold-light tracking-[0.2em] font-medium">宿命鑑定</span>
+                <span class="text-gold">×</span>
+                <span class="text-gold-light tracking-[0.2em] font-medium">魂の対話</span>
+            </div>
+
+            <h2 class="text-xl md:text-4xl font-medium tracking-[0.1em] mb-16 leading-relaxed">
+                【ソウルメッセージ<br>100人チャレンジ】
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-3xl mx-auto mb-16 px-4">
+                <div class="border-t border-gold/30 pt-8">
+                    <p class="text-gold mb-3 text-[10px] tracking-widest uppercase opacity-80">Format</p>
+                    <p class="text-sm md:text-base tracking-widest leading-loose font-medium">オンライン対話<br><span class="text-xs md:text-sm opacity-60 font-light font-sans tracking-normal">（Zoom等）</span></p>
+                </div>
+                <div class="border-t border-gold/30 pt-8">
+                    <p class="text-gold mb-3 text-[10px] tracking-widest uppercase opacity-80">Time</p>
+                    <p class="text-sm md:text-base tracking-widest leading-loose font-medium">15分間の<br>濃密なセッション</p>
+                </div>
+                <div class="border-t border-gold/30 pt-8">
+                    <p class="text-gold mb-3 text-[10px] tracking-widest uppercase opacity-80">Offer</p>
+                    <p class="text-sm md:text-base tracking-widest leading-loose font-medium">先着限定 100名様<br><span class="text-gold-light font-bold">（無償モニター）</span></p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white/5 p-8 md:p-14 rounded-[2rem] max-w-2xl mx-auto border border-white/10 shadow-2xl overflow-hidden text-center">
+                <p class="text-base md:text-xl tracking-widest leading-loose font-medium text-gold-light px-4">
+                    <span class="phrase-block">宿命から読み解く、</span><br>
+                    <span class="phrase-block">あなただけの</span><br>
+                    <span class="no-orphan">「一生ものの羅針盤（言葉）」を</span><br>
+                    <span class="no-orphan">誠実にお渡しします。</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Circulation -->
+    <section id="circulation" class="py-20 md:py-32 px-6 bg-sakurabg text-center">
+        <div class="max-w-3xl mx-auto fade-in-section bg-white p-8 md:p-20 shadow-2xl rounded-[2rem] border border-sakura/20 relative">
+            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-sakura text-3xl bg-sakurabg px-6 py-2 rounded-full">🌸</div>
+            
+            <h2 class="text-xl md:text-2xl font-medium tracking-widest text-gray-900 mb-10">光の循環へのお願い</h2>
+            
+            <div class="text-gray-700 tracking-widest leading-loose mb-10 text-sm md:text-base px-4">
+                <p class="mb-2">
+                  <span class="no-orphan">今回は完全無償でのご提供につき、</span>
+                </p>
+                <p>
+                  <span class="phrase-block">下記2点の「循環」への</span><br class="md:hidden">
+                  <span class="phrase-block">ご協力をお願いしております。</span>
+                </p>
+            </div>
+
+            <ul class="space-y-6 text-gray-800 tracking-wider w-fit mx-auto mb-12 text-sm md:text-base text-left px-4">
+                <li class="flex items-start">
+                    <span class="text-gold mr-4 text-lg">✧</span>
+                    <span>終了後のアンケートへのご協力</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-gold mr-4 text-lg">✧</span>
+                    <span>個人を特定しない形での<span class="no-orphan">SNS掲載許可</span></span>
+                </li>
+            </ul>
+
+            <div class="border-t border-gray-100 pt-10 px-2">
+                <p class="text-gray-700 tracking-widest leading-loose text-sm md:text-base opacity-90">
+                    <span class="phrase-block">あなたの輝きが、</span><br class="md:hidden text-center">
+                    <span class="phrase-block">暗闇にいる誰かの一隅を照らす</span><br class="md:hidden text-center">
+                    <span class="no-orphan">光となる。</span><br><br>
+                    <span class="phrase-block">そんな循環の物語を、</span><br class="md:hidden text-center">
+                    <span class="no-orphan">一緒に創りませんか。</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-24 px-6 bg-pearl border-t border-gray-100 text-center text-gray-900">
+        <div class="max-w-2xl mx-auto fade-in-section text-center">
+            <h2 class="text-2xl md:text-4xl font-medium tracking-widest mb-10 leading-relaxed">
+                <span class="phrase-block text-indigo-900">人生の羅針盤を、</span><br class="md:hidden">
+                <span class="no-orphan">あなたに。</span>
+            </h2>
+            <p class="text-gray-600 tracking-widest leading-loose mb-16 text-sm md:text-lg px-2">
+                <span class="phrase-block">100名様限定・無償モニター</span><br class="md:hidden">
+                <span class="no-orphan">受付を開始いたします。</span>
+            </p>
+            
+            <a href="https://www.reservestock.jp/pc_reserves_v3/course/42321?course_id=Y2I0ODQ5OGQyO" target="_blank" class="btn-glow inline-block px-10 py-6 md:px-16 md:py-7 bg-indigo-950 text-gold-light hover:bg-gold hover:text-white transition-all duration-500 text-base md:text-xl tracking-widest shadow-2xl rounded-full font-bold">
+                <span class="no-orphan">100人チャレンジに申し込む</span>
+            </a>
+            <p class="text-[10px] text-gray-400 mt-10 tracking-[0.2em] font-sans">※定員に達し次第、受付終了となります。</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-950 text-gray-400 py-20 text-center text-[10px] md:text-sm tracking-widest border-t border-gold/20">
+        <div class="flex flex-col items-center justify-center space-y-6">
+            <div class="text-gold text-2xl font-light mb-2">≋</div>
+            <p class="text-gold-light text-sm md:text-base font-medium tracking-[0.3em]">魂の羅針盤 Mii</p>
+            <p class="opacity-60 font-sans uppercase">Soulcounselor Mii</p>
+            <a href="https://www.instagram.com/mii_suuhi33" target="_blank" class="inline-block mt-4 px-6 py-2 md:px-8 md:py-3 border border-white/10 rounded-full hover:text-gold hover:border-gold transition-all duration-300 text-[10px] md:text-xs">
+                Instagram: @mii_suuhi33
+            </a>
+            <p class="mt-16 opacity-30 font-sans">&copy; 2026 Soulcounselor Mii. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 全てのプログラムをここに集約 -->
+    <script>
+        /**
+         * Gemini API Configuration
+         */
+        const apiKey = ""; // 実行環境から提供されるキーを使用
+        const endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent";
+
+        /**
+         * ユーザーの言葉をAIで書き換える関数
+         */
+        async function redesignWord(input) {
+            const systemPrompt = "あなたは『魂の羅針盤 Mii』です。宿命鑑定と数秘を融合させたソウルカウンセラーとして、ユーザーが抱える重い言葉や停滞した感情を、2026年4月の宇宙のエネルギー（革命・再始動・浄化）に合わせた、希望に満ちた『新しい言葉（言霊）』へとリデザインしてください。回答は必ず指定のJSON形式で返してください。properties: { redesigned_word: '短く力強い新しい言葉', message: 'Miiとしての優しく寄り添い、背中を押すメッセージ（2〜3文程度）' }";
+            const userPrompt = `私の今の重い言葉・感情はこれです: 「${input}」。これを私の運命を再始動させる言葉に変えてください。`;
+
+            let retries = 0;
+            const maxRetries = 5;
+            
+            while (retries < maxRetries) {
+                try {
+                    const response = await fetch(`${endpoint}?key=${apiKey}`, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            contents: [{ parts: [{ text: userPrompt }] }],
+                            systemInstruction: { parts: [{ text: systemPrompt }] },
+                            generationConfig: { 
+                                responseMimeType: "application/json",
+                                responseSchema: {
+                                    type: "OBJECT",
+                                    properties: {
+                                        redesigned_word: { type: "STRING" },
+                                        message: { type: "STRING" }
+                                    },
+                                    required: ["redesigned_word", "message"]
+                                }
+                            }
+                        })
+                    });
+
+                    if (!response.ok) throw new Error("API request failed");
+                    const result = await response.json();
+                    return JSON.parse(result.candidates[0].content.parts[0].text);
+                } catch (error) {
+                    retries++;
+                    if (retries === maxRetries) throw error;
+                    // 指数バックオフ
+                    await new Promise(resolve => setTimeout(resolve, Math.pow(2, retries) * 1000));
+                }
+            }
+        }
+
+        /**
+         * メインのDOM制御とインタラクション
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. スクロール監視によるフェードイン
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { 
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+
+            // 2. 星屑（Stardust）のCanvasアニメーション
+            const canvas = document.getElementById('stardust-canvas');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let width, height, particles = [];
+                
+                const resize = () => {
+                    width = canvas.width = canvas.parentElement.offsetWidth;
+                    height = canvas.height = canvas.parentElement.offsetHeight;
+                };
+
+                const createParticles = () => {
+                    particles = [];
+                    const num = Math.floor((width * height) / 15000); 
+                    for (let i = 0; i < num; i++) {
+                        particles.push({
+                            x: Math.random() * width,
+                            y: Math.random() * height,
+                            radius: Math.random() * 1.5 + 0.1,
+                            speedY: Math.random() * 0.3 + 0.1,
+                            alpha: Math.random() * 0.5 + 0.1
+                        });
+                    }
+                };
+
+                const draw = () => {
+                    ctx.clearRect(0, 0, width, height);
+                    particles.forEach(p => {
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(212, 175, 55, ${p.alpha})`;
+                        ctx.fill();
+                        p.y -= p.speedY;
+                        if (p.y < 0) p.y = height;
+                    });
+                    requestAnimationFrame(draw);
+                };
+
+                window.addEventListener('resize', () => { resize(); createParticles(); });
+                resize();
+                createParticles();
+                draw();
+            }
+
+            // 3. AI体験「言霊リデザイン」のロジック
+            const transformBtn = document.getElementById('transform-btn');
+            const inputField = document.getElementById('old-word');
+            const aiResult = document.getElementById('ai-result');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const resultContent = document.getElementById('result-content');
+            const redesignedWordEl = document.getElementById('redesigned-word');
+            const miiMessageEl = document.getElementById('mii-message');
+
+            transformBtn.addEventListener('click', async () => {
+                const input = inputField.value.trim();
+                if (!input) return;
+
+                // UI表示の切り替え
+                aiResult.classList.remove('hidden');
+                loadingSpinner.classList.remove('hidden');
+                resultContent.classList.add('hidden');
+                transformBtn.disabled = true;
+                transformBtn.classList.add('opacity-50');
+
+                try {
+                    const data = await redesignWord(input);
+                    redesignedWordEl.textContent = data.redesigned_word;
+                    miiMessageEl.textContent = data.message;
+                    
+                    loadingSpinner.classList.add('hidden');
+                    resultContent.classList.remove('hidden');
+                    
+                    // 結果エリアまでスムーズスクロール
+                    aiResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } catch (error) {
+                    aiResult.classList.add('hidden');
+                    console.error("AI Generation Error:", error);
+                    alert("通信が一時的に不安定なようです。少し時間を置いてお試しください。");
+                } finally {
+                    transformBtn.disabled = false;
+                    transformBtn.classList.remove('opacity-50');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
